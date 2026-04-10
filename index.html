@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relationship Between File Server and Web Server</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page-bg"></div>
+
+    <header class="hero">
+        <nav class="topbar wrap">
+            <div class="brand">Hosting Demo</div>
+            <a class="top-button" href="#demo">View Demo</a>
+        </nav>
+
+        <div class="wrap hero-content">
+            <div class="hero-text">
+                <p class="eyebrow">Web Hosting + File Hosting Integration</p>
+                <h1>How a Web Server and File Server Work Together</h1>
+                <p class="lead">
+                    This website is hosted on a web hosting service, while the image and downloadable file are loaded from a separate file hosting provider.
+                </p>
+
+                <div class="identity-card">
+                    <div>
+                        <span class="label">Name</span>
+                        <strong>Mark Angelo G. Oprido</strong>
+                    </div>
+                    <div>
+                        <span class="label">Section</span>
+                        <strong>BSIT 3-F1</strong>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#relationship" class="button primary">Learn More</a>
+                    <a href="#demo" class="button secondary">See Example</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <span class="mini-title">System Flow</span>
+                    <div class="flow-box">Web Hosting Service</div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-box">Website Interface</div>
+                    <div class="flow-arrow">↑</div>
+                    <div class="flow-box alt">File Hosting Service</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap main-content">
+        <section id="relationship" class="panel">
+            <div class="section-heading">
+                <p class="section-tag">Overview</p>
+                <h2>Relationship Between the Two Services</h2>
+                <p>
+                    A web server delivers the website itself, while a file server provides the external files that the website uses and displays.
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <article class="info-card">
+                    <div class="icon">1</div>
+                    <h3>Web Server</h3>
+                    <p>
+                        The web server sends the HTML, CSS, and JavaScript to the browser so the website can appear on screen.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <div class="icon">2</div>
+                    <h3>File Server</h3>
+                    <p>
+                        The file server stores assets such as images, text files, PDFs, and other downloadable content.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <div class="icon">3</div>
+                    <h3>Public File URLs</h3>
+                    <p>
+                        The website uses public URLs from the file hosting provider to fetch and display those hosted resources.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <div class="icon">4</div>
+                    <h3>Combined Output</h3>
+                    <p>
+                        The result is one complete webpage where the page and the files come from two different hosting services.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel split-panel">
+            <div>
+                <p class="section-tag">Process Flow</p>
+                <h2>Simple Data Flow Diagram</h2>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <span>01</span>
+                        <p>The browser opens the website from the web hosting provider.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span>02</span>
+                        <p>The website loads its layout, style, and script.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span>03</span>
+                        <p>The page requests the image and file from the file hosting provider.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span>04</span>
+                        <p>The user sees the full webpage with external hosted content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagram-card">
+                <div class="diagram-node">Web Hosting Service</div>
+                <div class="diagram-line">delivers website</div>
+                <div class="diagram-node center">Browser / User</div>
+                <div class="diagram-line">requests files</div>
+                <div class="diagram-node alt">File Hosting Service</div>
+            </div>
+        </section>
+
+        <section id="demo" class="panel">
+            <div class="section-heading">
+                <p class="section-tag">Live Example</p>
+                <h2>File-Server Content Used by This Website</h2>
+                <p>
+                    Replace the sample links with your actual Cloudinary or other file-hosting URLs after upload.
+                </p>
+            </div>
+
+            <div class="demo-grid">
+                <article class="demo-card">
+                    <div class="demo-head">
+                        <span class="pill">Hosted Image</span>
+                    </div>
+                    <img id="hostedImage"
+                         class="preview-image"
+                         alt="Hosted asset preview"
+                         src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" />
+                    <p>
+                        This image is loaded through a direct URL, proving that a webpage can display content from a separate file server.
+                    </p>
+                </article>
+
+                <article class="demo-card">
+                    <div class="demo-head">
+                        <span class="pill">Hosted File</span>
+                    </div>
+                    <div class="file-box">
+                        <h3>Sample Hosted Document</h3>
+                        <p>
+                            This button should open a file stored on your file hosting provider, not inside the website folder.
+                        </p>
+                        <a id="hostedFileLink"
+                           class="button primary full"
+                           href="sample-file.txt"
+                           target="_blank"
+                           rel="noopener">
+                            Open Sample Hosted File
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <p class="section-tag">Output</p>
+                <h2>Sample Output Explanation</h2>
+            </div>
+
+            <div class="explanation-box">
+                <p>
+                    When the user opens this website, the page is delivered by the web hosting provider. The image and downloadable file can come from a separate file hosting provider. This proves that a website can depend on resources stored on a different server.
+                </p>
+                <pre id="codeBlock"></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer wrap">
+        <p>Prepared for a Hosting Demonstration Project • Mark Angelo G. Oprido • BSIT 3-F1</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
